@@ -1,0 +1,52 @@
+<?php
+
+date_default_timezone_set("Brazil/East");
+
+$data = getdate();
+
+$diasdasemana = $data["wday"];
+$dia = $data["mday"];
+$mes = $data["mon"];
+$ano = $data["year"];
+	
+
+$hora = $data["hours"] -1;
+$minuto = $data["minutes"];
+$segundo = $data["seconds"];
+
+switch ( $diasdasemana ){
+	case 0:
+		echo "domingo";
+		echo "<br/>";
+		break;
+	case 1:
+		echo "segunda";
+		echo "<br/>";
+		break;
+	case 2:
+		echo "terça";
+		echo "<br/>";
+		break;
+	case 3:
+		echo "quarta";
+		echo "<br/>";
+		break;
+	case 4:
+		echo "quinta";
+		echo "<br/>";
+		break;
+	case 5:
+		echo "sexta";
+		echo "<br/>";
+		break;
+	case 6:
+		echo "sábado";
+		echo "<br/>";
+		break;
+}
+
+echo "$dia/$mes/$ano" . "<br/>" . "0$hora:$minuto:$segundo";
+
+
+
+?>
