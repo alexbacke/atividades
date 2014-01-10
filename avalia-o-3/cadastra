@@ -1,0 +1,29 @@
+<?php
+
+    require_once("menu.php");
+
+    session_start();
+    
+    $nome = $_REQUEST["nome"];
+    $prazo= $_REQUEST["prazo"];
+    
+    $aceito = false;
+    if(isset($_REQUEST["aceito"])){
+        $aceito = true;
+    }
+    
+    if(!isset($_SESSION["cadastros"])) {
+        $_SESSION["cadastros"] = array();
+    }
+    
+    $pessoa = array("nome" => $nome,
+                    "prazo" => $prazo,
+                    "aceito" => $aceito);
+                    
+    
+    
+    // array_push ela colocar o nome da pessoa a ser cadastrada no final da lista
+    array_push($_SESSION["cadastros"], $pessoa);
+    
+    echo "Cadastro efeituado com sucesso";
+?>
