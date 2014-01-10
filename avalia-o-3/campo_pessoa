@@ -1,0 +1,25 @@
+ <fieldset> 
+            <label>Nome:</label><input type="text"  name="nome" /> <br/>
+            <br/>
+    </fieldset>
+    <br/>
+    <fieldset>
+            <input type="radio" name="cor" value="n" checked="checked"> <label>"vermelho"</label> <br /> 
+            <input type="radio" name="cor" value="u"> <label>"azul" </label> <br />
+            <input type="radio" name="cor" value="u"> <label>"preto" </label> <br />
+           
+             
+            <br/>
+    </fieldset>
+    <br />
+          
+    <input type="checkbox" value="sim" name="aceito"/>
+    <label>prazo de entrega </label>
+    <br/>
+    <select name="prazo">
+        <option>5 Dias</option>
+        <option>10 Dias</option>
+        <option>15 Dias</option>
+        
+    </select>
+    </br>
