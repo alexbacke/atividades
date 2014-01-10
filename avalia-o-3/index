@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css"  href="style.css" >
+   
+
+<?php
+
+
+
+
+require_once("menu.php");
+
+    session_start();
+    if(isset($_SESSION["cadastros"])) {
+        $cadastros = $_SESSION["cadastros"];
+        
+        
+        echo "<dl>"; //dl e lista de descrição
+        
+        foreach($cadastros as $produto) {
+            if($produto != null) {
+                $nome = $produto["nome"];
+                $cor  = $produto["cor"];
+                $novoProduto = $produto["novoProduto"];
+                $prazo = $produto ["prazo"];
+                
+               
+            
+                echo "<dt >" . $produto["nome"] . "</dt>"; 
+                echo "<dd>nome: " . $nome ."</dd>";
+                echo "<dd>cor: " . $cor ."</dd>";
+                echo "<dd>novoProduto: " . $novoProduto ."</dd>";
+                echo "<dd>prazo: " . $prazo ."</dd>";
+                echo "<dd>Aceitou a compra:";
+                
+                if($novoProduto){
+                    echo"sim";
+               
+                }
+            }
+            
+        }
+        
+        echo "</dl>";
+    }
+    else {
+        echo "Compra não efitavada com sucesso";
+    }
+?>
+    
