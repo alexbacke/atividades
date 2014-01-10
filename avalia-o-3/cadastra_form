@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title> Cadastro</title>
+    </head>
+    <body>
+        
+            <?php
+            require_once("menu.php");
+            ?>
+            
+        <form action="cadastra.php" method="post" >
+           <?php require_once("campo_pessoa.php"); ?>
+           <input type="submit"    value="Enviar" />
+            
+        </form>
+    </body>
+    
+</html>
+
+
+
