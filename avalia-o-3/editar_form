@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Cadastro</title>
+        <link rel="stylesheet" type="text/css"  href="style.css" >
+    </head>
+    <body>
+        
+            <?php
+            require("menu.php");
+            ?>
+            
+        <form action="editar.php" method="post" >
+            <label> Remover o codigo do produto </label>
+            <br />
+            <input type="text"  name="id" /> <br />
+            <br />
+            
+            <?php
+            require("campo_pessoa.php");
+            ?>
+            
+            <input type="submit"    value="Editar" />
+
+        </form>
+    </body>
+    
+</html>
+
+<?php
+
